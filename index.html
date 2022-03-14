@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a7f846dfa3.js" crossorigin="anonymous"></script>
+    <title>The Story Engine &amp; Deck of Worlds</title>
+	</head>
+
+	<body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <span class="navbar-brand mb-0 h1">The Story Engine &amp; Deck of Worlds</span>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-8 mb-5">
+          <h4 class="mt-5">
+            The Story Engine
+          </h4>
+          <ul class="list-group list-group-horizontal">
+            <button class="list-group-item list-group-item-action" onclick="draw('tse/Demo','Agent',    12,4);"><i class="fa-solid fa-user"></i> <strong>Agent</strong></button>
+            <button class="list-group-item list-group-item-action" onclick="draw('tse/Demo','Anchor',   12,4);"><i class="fa-solid fa-anchor"></i> <strong>Anchor</strong> </button>
+            <button class="list-group-item list-group-item-action" onclick="draw('tse/Demo','Aspect',   12,4);"><i class="fa-solid fa-masks-theater"></i> <strong>Aspect</strong> </button>
+            <button class="list-group-item list-group-item-action" onclick="draw('tse/Demo','Conflict', 12,2);"><i class="fa-solid fa-cloud-bolt"></i> <strong>Conflict</strong> </button>
+            <button class="list-group-item list-group-item-action" onclick="draw('tse/Demo','Engine',   12,2);"><i class="fa-solid fa-gears"></i> <strong>Engine</strong> </button>
+          </ul>
+
+          <h4 class="mt-5">
+            The Deck of Worlds
+          </h4>
+          <ul class="list-group list-group-horizontal">
+            <button class="list-group-item list-group-item-action" onclick="draw('dow/Demo','Advent',6,2);"><i class="fa-solid fa-shuffle"></i> <strong>Advent</strong></button>
+            <button class="list-group-item list-group-item-action" onclick="draw('dow/Demo','Attribute',12,4);"><i class="fa-solid fa-award"></i> <strong>Attribute</strong> </button>
+            <button class="list-group-item list-group-item-action" onclick="draw('dow/Demo','Landmark',12,2);"><i class="fa-solid fa-compass"></i> <strong>Landmark</strong> </button>
+            <button class="list-group-item list-group-item-action" onclick="draw('dow/Demo','Namesake',12,4);"><i class="fa-solid fa-flag-pennant"></i> <strong>Namesake</strong> </button>
+            <button class="list-group-item list-group-item-action" onclick="draw('dow/Demo','Origin',6,4);"><i class="fa-solid fa-book-open-cover"></i> <strong>Origin</strong> </button>
+            <button class="list-group-item list-group-item-action" onclick="draw('dow/Demo','Region',6,1);"><i class="fa-solid fa-trees"></i> <strong>Region</strong> </button>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <main class="canvas-wrapper">
+          <canvas id="canvas" class="border shadow mb-5" style="height: 900px; width: 100%;">Your browser does not support HTML5 canvas.</canvas>
+          <script src="site/canvas.js"></script>
+        </main>
+      </div>
+    </div>
+
+	</body>
+</html>

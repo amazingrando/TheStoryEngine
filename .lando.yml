@@ -1,0 +1,4 @@
+name: thestoryengine
+recipe: lamp
+config:
+  webroot: .

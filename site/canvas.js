@@ -1,5 +1,9 @@
 var theCanvas = document.getElementById("canvas");
+const theCanvasWrapper = document.querySelector('.canvas-wrapper');
 var context = theCanvas.getContext("2d");
+
+console.log(theCanvasWrapper.clientWidth);
+console.log(theCanvasWrapper.clientWidth);
 
 var numShapes;
 var shapes;
@@ -31,7 +35,7 @@ function init() {
 }
 
 function makeShape(card,sides) {
-	var	tempX = theCanvas.width / 2;
+	var	tempX = theCanvasWrapper.clientWidth / 2;
 	var	tempY = theCanvas.height / 2;
 	var tempImg = new Image()
 	var tempR = 0;
@@ -97,7 +101,7 @@ function mouseDownListener(evt) {
 	
 	//getting mouse position correctly, being mindful of resizing that may have occured in the browser:
 	var bRect = theCanvas.getBoundingClientRect();
-	mouseX = (evt.clientX - bRect.left)*(theCanvas.width/bRect.width);
+	mouseX = (evt.clientX - bRect.left)*(theCanvasWrapper.clientWidth/bRect.width);
 	mouseY = (evt.clientY - bRect.top)*(theCanvas.height/bRect.height);
 			
 	//find which shape was clicked
@@ -143,12 +147,12 @@ function mouseMoveListener(evt) {
 	var posX;
 	var posY;
 	var minX = 0;
-	var maxX = theCanvas.width;
+	var maxX = theCanvasWrapper.clientWidth;
 	var minY = 0;
 	var maxY = theCanvas.height;
 	//getting mouse position correctly 
 	var bRect = theCanvas.getBoundingClientRect();
-	mouseX = (evt.clientX - bRect.left)*(theCanvas.width/bRect.width);
+	mouseX = (evt.clientX - bRect.left)*(theCanvasWrapper.clientWidth/bRect.width);
 	mouseY = (evt.clientY - bRect.top)*(theCanvas.height/bRect.height);
 	
 	//clamp x and y positions to prevent object from dragging outside of canvas
@@ -180,10 +184,9 @@ function drawShapes() {
 }
 
 function drawScreen() {
-//	context.fillStyle = "#AAAAAA";
 	context.fillStyle = "#FFFFFF";
 	
-	context.fillRect(0,0,theCanvas.width,theCanvas.height);
+	context.fillRect(0,0,theCanvasWrapper.clientWidth,theCanvas.height);
 	
 	drawShapes();		
 }
